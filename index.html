@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+            font-family: sans-serif;
+        }
+        .pop-up {
+            width: 300px;
+            height: 400px;
+            background-color: #c8b8d9;
+            color: #373737;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            border: 2px solid #8e3598bb;
+            box-shadow: 0 0  20px #622569;
+            border-radius: 10px;
+        }
+
+        .text-container p {
+            height: 200px;
+            text-align: justify;
+            overflow: auto;
+            padding: 0 12px;
+            border-top: 1px solid #d6d4e0;
+            border-bottom: 1px  solid #d6d4e0;
+        }
+
+        .container > *{
+            cursor: pointer;
+        }
+
+        button {
+            width: 80px;
+            height: 30px;
+            /* background-color: #5b9aa0;
+            color: snow; */
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pop-up animate__animated animate__fadeInDownBig">
+        
+        <h3>Please Agree to this</h3>
+        <div class="text-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas id temporibus perspiciatis dicta doloremque voluptatem voluptas assumenda amet exercitationem ducimus, deleniti, esse quae odit! Repellendus rerum praesentium molestiae odit quos asperiores possimus ad laboriosam exercitationem distinctio quidem necessitatibus, alias natus quae assumenda fugit quam, neque ex quo at aspernatur quia repudiandae ipsa. Eveniet, esse. Molestias iure dolore nisi. Ipsum, saepe. Quam et delectus illum tenetur impedit, quis a? Dignissimos magnam in perspiciatis nulla, a doloremque repudiandae sequi at itaque praesentium!</p>
+        </div>
+        <div class="container">
+            <input type="radio" id="agree">
+            <label for="agree">I agree</label>
+        </div>
+        <button style="cursor: pointer;" type="button" id="confirm" disabled>Confirm</button>
+    </div>
+
+    <script>
+        let agree = document.getElementById('agree')
+        let confirmBtn = document.getElementById('confirm')
+        agree.addEventListener("click" , confirmtext)
+        function confirmtext () {
+            confirmBtn.disabled = false
+        }
+    </script>
+</body>
+</html>
